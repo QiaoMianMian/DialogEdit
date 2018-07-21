@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llt_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/card_home_middle"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/sleep_log"
+            android:textColor="@color/colorDarkLight"
+            android:textSize="@dimen/txtSize_20" />
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_green_corner_4"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="@string/sleep_label_add"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txtSize_14" />
+
+        <cn.bingoogolapple.badgeview.BGABadgeImageView
+            android:id="@+id/bga_iv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_log_selected"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llt_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray" />
+
+        <com.dialog.edit.view.TagView
+            android:id="@+id/tv_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginRight="-10dp"
+            app:tcvBorder="10dp"
+            app:tcvCanTagClick="false"
+            app:tcvItemBorderHorizontal="0dp"
+            app:tcvItemBorderVertical="10dp"
+            app:tcvSingleLine="false"
+            app:tcvTextColor="@color/colorDarkLight"
+            app:tcvTextSize="14" />
+    </LinearLayout>
+</LinearLayout>
+
+
+

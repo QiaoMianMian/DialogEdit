@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">编辑标签</string>
+
+    <string name="sleep_log">睡眠日志</string>
+    <string name="sleep_label_add_new">添加标签</string>
+    <string name="sleep_label_finish">完成</string>
+    <string name="sleep_label_edit">编辑</string>
+    <string name="sleep_label_done">确定</string>
+    <string name="sleep_label_add">添加</string>
+    <string name="sleep_label_input">输入标签</string>
+
+    <string name="sleep_log_water">喝了水</string>
+    <string name="sleep_log_eat">吃了东西</string>
+    <string name="sleep_log_sport">做运动</string>
+    <string name="sleep_log_walk">出去散步</string>
+</resources>
