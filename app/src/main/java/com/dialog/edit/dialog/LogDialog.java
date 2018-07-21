@@ -138,7 +138,7 @@ public class LogDialog extends DialogFragment {
             int keyboardHeight = screenHeight - displayHeight;
             ViewGroup.LayoutParams lps = lltParent.getLayoutParams();
             if (keyboardHeight > screenHeight / 3) {
-                lps.height = keyboardHeight;
+                lps.height = displayHeight - DensityUtils.dip2px(getActivity(), 20);
             } else {
                 lps.height = DensityUtils.dip2px(getActivity(), 387);
             }
