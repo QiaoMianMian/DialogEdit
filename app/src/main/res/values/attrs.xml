@@ -19,4 +19,9 @@
 
         <attr name="tcvTagResId" format="reference" />
     </declare-styleable>
+
+    <!-- 编辑框属性 -->
+    <declare-styleable name="EdtClear">
+        <attr name="EdtColor" format="color|reference" />
+    </declare-styleable>
 </resources>

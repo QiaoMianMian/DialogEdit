@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/log_parent_llt"
+        android:layout_width="match_parent"
+        android:layout_height="387dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_log_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sleep_log"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBlackDark"
+                android:textSize="@dimen/txtSize_20" />
+
+            <TextView
+                android:id="@+id/tv_log_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="07/12"
+                android:textColor="@color/colorDark"
+                android:textSize="@dimen/txtSize_14" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayLight" />
+
+        <com.dialog.edit.view.EdtClear
+            android:id="@+id/edt_log_label"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@null"
+            android:drawableRight="@mipmap/ic_edit_clear"
+            android:hint="@string/sleep_label_input"
+            android:lines="1"
+            android:maxLength="20"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textCursorDrawable="@drawable/bg_edit_cursor"
+            android:textSize="@dimen/txtSize_17" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayLight" />
+
+        <com.dialog.edit.label.LabelRecyclerView
+            android:id="@+id/lav_log_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayLight" />
+
+        <TextView
+            android:id="@+id/tv_log_finish"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/sleep_label_finish"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/txtSize_20" />
+
+    </LinearLayout>
+</RelativeLayout>

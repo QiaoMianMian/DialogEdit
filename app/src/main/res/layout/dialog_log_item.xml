@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llt_log_item"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_log_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_log_selected" />
+
+    <TextView
+        android:id="@+id/tv_log_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:paddingRight="20dp"
+        android:singleLine="true"
+        android:text="Read book"
+        android:textColor="@color/colorBlackDark"
+        android:textSize="@dimen/txtSize_17" />
+
+    <TextView
+        android:id="@+id/tv_log_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:singleLine="true"
+        android:text="1"
+        android:textColor="@color/colorBlackDark"
+        android:textSize="@dimen/txtSize_14" />
+
+</LinearLayout>

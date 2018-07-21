@@ -1,4 +1,4 @@
-package com.dialog.edit.label;
+package com.dialog.edit.dialog;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -20,6 +20,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dialog.edit.R;
+import com.dialog.edit.adapter.LabelAdapter;
+import com.dialog.edit.label.LabelDivider;
+import com.dialog.edit.label.LabelEntry;
+import com.dialog.edit.label.LabelEnum;
+import com.dialog.edit.label.LabelImp;
+import com.dialog.edit.label.LabelInterface;
+import com.dialog.edit.label.LabelRecyclerView;
 import com.dialog.edit.units.AppUtils;
 import com.dialog.edit.units.DensityUtils;
 import com.dialog.edit.units.LayoutUtils;
@@ -84,10 +91,12 @@ public class LabelDialog extends DialogFragment implements LabelImp, View.OnClic
                 SPUtils.SP_LOCAL_LABEL, ""));
         if (mEntryList == null) {
             mEntryList = new ArrayList<>();
-            mEntryList.add(new LabelEntry(getString(R.string.sleep_log_water), false, 0));
-            mEntryList.add(new LabelEntry(getString(R.string.sleep_log_eat), false, 0));
-            mEntryList.add(new LabelEntry(getString(R.string.sleep_log_sport), false, 0));
-            mEntryList.add(new LabelEntry(getString(R.string.sleep_log_walk), false, 0));
+            mEntryList.add(new LabelEntry(getString(R.string.sleep_log_water), false, 5));
+            mEntryList.add(new LabelEntry(getString(R.string.sleep_log_eat), false, 4));
+            mEntryList.add(new LabelEntry(getString(R.string.sleep_log_sport), false, 4));
+            mEntryList.add(new LabelEntry(getString(R.string.sleep_log_walk), false, 3));
+            mEntryList.add(new LabelEntry(getString(R.string.sleep_log_tv), false, 2));
+            mEntryList.add(new LabelEntry(getString(R.string.sleep_log_wine), false, 1));
         }
     }
 

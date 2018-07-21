@@ -1,4 +1,4 @@
-package com.dialog.edit.label;
+package com.dialog.edit.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.dialog.edit.R;
+import com.dialog.edit.label.LabelEntry;
+import com.dialog.edit.label.LabelImp;
+import com.dialog.edit.label.LabelLayout;
+import com.dialog.edit.label.LabelViewHolder;
 import com.dialog.edit.units.SPUtils;
 import com.dialog.edit.units.StringUtils;
 

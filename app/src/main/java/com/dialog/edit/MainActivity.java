@@ -2,11 +2,14 @@ package com.dialog.edit;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.SwitchCompat;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.dialog.edit.label.LabelDialog;
+import com.dialog.edit.dialog.LabelDialog;
+import com.dialog.edit.dialog.LogDialog;
 import com.dialog.edit.label.LabelEntry;
 import com.dialog.edit.units.SPUtils;
 import com.dialog.edit.units.StringUtils;
@@ -19,6 +22,8 @@ import cn.bingoogolapple.badgeview.BGABadgeImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    SwitchCompat scStyleChoice;
+    TextView tvStyleText;
     LinearLayout lltContainer;
     TextView tvAdd;
     BGABadgeImageView bivLabel;
@@ -29,12 +34,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        scStyleChoice = findViewById(R.id.sc_style_choice);
+        scStyleChoice.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                tvStyleText.setText(R.string.sleep_style_2);
+            } else {
+                tvStyleText.setText(R.string.sleep_style_1);
+            }
+        });
+        tvStyleText = findViewById(R.id.tv_style_text);
 
         lltContainer = findViewById(R.id.llt_main_container);
         lltContainer.setOnClickListener(v -> {
-            LabelDialog labelDialog = new LabelDialog();
-            labelDialog.show(getSupportFragmentManager(), "Label");
-            labelDialog.setLabelInterface(() -> doSleepLog());
+            if (scStyleChoice.isChecked()) {
+                LogDialog logDialog = new LogDialog();
+                logDialog.show(getSupportFragmentManager(), "Log");
+                logDialog.setLabelInterface(() -> doSleepLog());
+            } else {
+                LabelDialog labelDialog = new LabelDialog();
+                labelDialog.show(getSupportFragmentManager(), "Label");
+                labelDialog.setLabelInterface(() -> doSleepLog());
+            }
         });
 
         tvAdd = findViewById(R.id.tv_add);

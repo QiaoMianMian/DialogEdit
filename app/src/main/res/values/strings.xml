@@ -9,8 +9,13 @@
     <string name="sleep_label_add">添加</string>
     <string name="sleep_label_input">输入标签</string>
 
-    <string name="sleep_log_water">喝了水</string>
-    <string name="sleep_log_eat">吃了东西</string>
-    <string name="sleep_log_sport">做运动</string>
-    <string name="sleep_log_walk">出去散步</string>
+    <string name="sleep_log_water">Drink Water</string>
+    <string name="sleep_log_eat">Eat</string>
+    <string name="sleep_log_sport">Sport</string>
+    <string name="sleep_log_walk">Walk</string>
+    <string name="sleep_log_tv">Watch TV</string>
+    <string name="sleep_log_wine">Drink Wine</string>
+
+    <string name="sleep_style_1">样式一:文本编辑</string>
+    <string name="sleep_style_2">样式二:文本过滤</string>
 </resources>
